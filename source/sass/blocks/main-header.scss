@@ -24,6 +24,7 @@
   background-repeat: no-repeat;
   background-position: center;
   border: none;
+  z-index: 1;
 
   &--close {
     background-color: transparent;
@@ -38,9 +39,10 @@
   flex-basis: 100%;
   width: 100%;
   padding-top: 135px;
+  background-color: $background-color;
 }
 
-.main-header__toggle-menu--close + .main-header__nav {
+.main-header__toggle-menu--close ~ .main-header__nav {
   display: block;
 }
 
