@@ -115,4 +115,4 @@ const build = gulp.series(clean, copy, optiimg, convertWebp, html, css, js);
 
 exports.csscomb = cssComb;
 exports.build = build;
-exports.start = gulp.series(css, server);
+exports.start = gulp.series(build, server);
