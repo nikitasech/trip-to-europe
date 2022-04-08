@@ -13,14 +13,19 @@
 </head>
 <body>
   <header class="main-header">
-    <img class="logo" src="./img/logo.svg" alt="Логотип компании Way" width="44" height="17">
-    <!-- main-header__toggle-menu--closed и текст "Открыть меню" при закрытом -->
-    <button class="main-header__toggle-menu main-header__toggle-menu--opened">Закрыть меню</button>
+    <img class="main-header__logo logo" src="./img/logo.svg" alt="Логотип компании Way" width="44" height="17">
+    <button class="main-header__toggle-menu main-header__toggle-menu--close" type="button">
+      <span class="visually-hidden">Закрыть меню</span>
+    </button>
 
     <nav class="main-header__nav">
       <ul class="main-header__nav-list">
-        <li class="main-header__nav-item">О путешествии</li>
-        <li class="main-header__nav-item">Цены</li>
+        <li class="main-header__nav-item">
+          <a class="main-header__nav-link" href="">О путешествии</a>
+        </li>
+        <li class="main-header__nav-item">
+          <a class="main-header__nav-link" href="">Цены</a>
+        </li>
       </ul>
     </nav>
   </header>
