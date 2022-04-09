@@ -53,6 +53,7 @@ const img = () => {
     imagemin.optipng({optimizationLevel: 5}),
     imagemin.mozjpeg({progressive: true})
   ]))
+  .pipe(gulp.dest('./build/img/'))
   .pipe(webp({quality: 85}))
   .pipe(gulp.dest('./build/img/'));
 }
