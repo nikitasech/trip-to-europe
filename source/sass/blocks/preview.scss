@@ -1,0 +1,108 @@
+.preview {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    display: block;
+    width: 100%;
+    height: 235px;
+
+    background-color: #587489;
+    background-image: url("./../img/mobile-background-preview@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
+      background-image: url("./../img/mobile-background-preview@2x.jpg");
+    }
+
+    @media (min-width: $tablet-width) {
+      height: 344px;
+
+      background-image: url("./../img/tablet-background-preview@1x.jpg");
+
+      @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
+        background-image: url("./../img/tablet-background-preview@2x.jpg");
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      height: 860px;
+
+      background-image: url("./../img/desktop-background-preview@1x.jpg");
+
+      @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
+        background-image: url("./../img/desktop-background-preview@2x.jpg");
+      }
+    }
+  }
+}
+
+.preview__content {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    padding-left: 700px;
+  }
+}
+
+.preview__title {
+  box-sizing: border-box;
+  height: 235px;
+  padding-top: 80px;
+
+  color: $background-color;
+
+  @media (min-width: $tablet-width) {
+    height: auto;
+    margin-bottom: 15px;
+    padding-top: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 30px;
+    padding-top: 185px;
+  }
+}
+
+.prewiew__text {
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-top: 20px;
+
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 15px;
+    width: 450px;
+    padding-top: 0;
+
+    color: $background-color;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+    margin-bottom: 40px;
+    width: 375px;
+  }
+}
+
+.preview__button {
+  @media (min-width: $desktop-width) {
+    width: 340px;
+  }
+}
