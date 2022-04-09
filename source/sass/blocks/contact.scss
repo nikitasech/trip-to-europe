@@ -1,0 +1,13 @@
+.contact {
+  display: flex;
+  align-items: center;
+
+  font-size: 18px;
+  line-height: 32px;
+  color: $dark-text-color;
+}
+
+.contact__icon {
+  margin-right: 10px;
+  stroke: $dark-text-color;
+}

@@ -1,5 +1,11 @@
 @import './fonts.scss';
 @import './variables.scss';
 @import './global.scss';
+@import './mixins.scss';
+
+@import './blocks/visually-hidden.scss';
+@import './blocks/logo.scss';
+@import './blocks/contact.scss';
 
 @import './blocks/container.scss';
+@import './blocks/main-header.scss';

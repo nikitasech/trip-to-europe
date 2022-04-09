@@ -12,6 +12,34 @@
   <title>Путешествие по Европе</title>
 </head>
 <body>
+  <div style="display: none;">
+    <include src="./build/img/sprite.svg"></include>
+  </div>
 
+  <header class="main-header">
+    <a class="main-header__logo logo">
+      <img class="main-header__logo-img logo__img" src="./img/logo.svg" alt="Логотип компании Way" width="44" height="17">
+    </a>
+    <button class="main-header__toggle-menu main-header__toggle-menu--close" type="button">
+      <span class="visually-hidden">Закрыть меню</span>
+    </button>
+
+    <nav class="main-header__nav">
+      <ul class="main-header__nav-list">
+        <li class="main-header__nav-item">
+          <a class="main-header__nav-link" href="">О путешествии</a>
+        </li>
+        <li class="main-header__nav-item">
+          <a class="main-header__nav-link" href="">Цены</a>
+        </li>
+      </ul>
+    </nav>
+    <a class="main-header__number contact contact--number" href="tel:+749978468446">
+      <svg class="contact__icon" width="17" height="25">
+        <use xlink:href="#icon-phone"></use>
+      </svg>
+      +7 (499) -784-684-46
+    </a>
+  </header>
 </body>
 </html>
