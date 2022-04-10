@@ -1,6 +1,14 @@
 .preview {
   position: relative;
 
+  @media (min-width: $tablet-width) {
+    margin-bottom: 78px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 289px;
+  }
+
   &::before {
     content: "";
     position: absolute;
