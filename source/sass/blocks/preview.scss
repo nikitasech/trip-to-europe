@@ -1,6 +1,10 @@
 .preview {
   position: relative;
 
+  @media (min-width: $desktop-width) {
+    height: 860px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -52,6 +56,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 344px;
   }
 
   @media (min-width: $desktop-width) {
@@ -76,10 +81,14 @@
   @media (min-width: $desktop-width) {
     margin-bottom: 30px;
     padding-top: 185px;
+
+    &::after {
+      content: none;
+    }
   }
 }
 
-.prewiew__text {
+.preview__text {
   margin-top: 0;
   margin-bottom: 20px;
   padding-top: 20px;
@@ -87,17 +96,18 @@
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 15px;
-    width: 450px;
+    width: 430px;
+    margin-bottom: 10px;
     padding-top: 0;
 
     color: $background-color;
   }
 
   @media (min-width: $desktop-width) {
-    text-align: left;
-    margin-bottom: 40px;
     width: 375px;
+    margin-bottom: 33px;
+
+    text-align: left;
   }
 }
 

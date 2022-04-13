@@ -5,9 +5,11 @@
   font-size: 18px;
   line-height: 32px;
   color: $dark-text-color;
+  letter-spacing: 0;
 }
 
 .contact__icon {
-  margin-right: 10px;
+  margin-right: 17px;
   stroke: $dark-text-color;
+  stroke-width: 2px;
 }

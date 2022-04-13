@@ -16,6 +16,13 @@
 }
 
 .main-header__logo {
+  @media (min-width: $desktop-width) {
+    flex-grow: 1;
+    margin-top: -5px;
+  }
+}
+
+.main-header__logo-img {
   padding-top: 18px;
   padding-left: 16px;
 
@@ -24,7 +31,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    flex-grow: 1;
+    padding-top: 0;
+    padding-left: 0;
     padding-left: 0;
   }
 }
@@ -74,7 +82,7 @@
     display: block;
     width: auto;
     height: auto;
-    margin-right: 74px;
+    margin-right: 78px;
     padding-top: 0;
   }
 }
@@ -100,7 +108,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-right: 30px;
+    margin-right: 42px;
     margin-bottom: 0;
 
     &:last-child {
@@ -116,6 +124,7 @@
   padding-left: 16px;
 
   font-weight: 600;
+  letter-spacing: 0;
   font-size: 20px;
   color: #48494d;
   text-decoration: none;
