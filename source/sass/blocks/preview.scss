@@ -1,12 +1,8 @@
 .preview {
   position: relative;
 
-  @media (min-width: $tablet-width) {
-    margin-bottom: 78px;
-  }
-
   @media (min-width: $desktop-width) {
-    margin-bottom: 289px;
+    height: 860px;
   }
 
   &::before {
@@ -60,6 +56,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 344px;
   }
 
   @media (min-width: $desktop-width) {
@@ -84,6 +81,10 @@
   @media (min-width: $desktop-width) {
     margin-bottom: 30px;
     padding-top: 185px;
+
+    &::after {
+      content: none;
+    }
   }
 }
 
@@ -95,17 +96,18 @@
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 15px;
-    width: 450px;
+    width: 430px;
+    margin-bottom: 10px;
     padding-top: 0;
 
     color: $background-color;
   }
 
   @media (min-width: $desktop-width) {
-    text-align: left;
-    margin-bottom: 40px;
     width: 375px;
+    margin-bottom: 33px;
+
+    text-align: left;
   }
 }
 

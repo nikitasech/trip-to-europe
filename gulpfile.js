@@ -20,6 +20,24 @@ const webp = require('gulp-webp');
 const imagemin = require('gulp-imagemin');
 const svgstore = require('gulp-svgstore');
 
+const pixelGlass = () => {
+  return gulp.src('./source/.pixel-glass/*.scss')
+  .pipe(plumber({
+    errorHandler: function(err) {
+      console.log(err);
+      this.emit('end');
+    }
+  }))
+  .pipe(sourcemap.init())
+  .pipe(sass())
+  .pipe(postcss([
+    autoprefixer()
+  ]))
+  .pipe(gulp.dest('./build/.pixel-glass'))
+  .pipe(gulp.src('./source/.pixel-glass/*.{js,png,jpg}'))
+  .pipe(gulp.dest('./build/.pixel-glass'));
+}
+
 const clean = () => {
   return del('build');
 }
@@ -129,5 +147,6 @@ const server = () => {
 const build = gulp.series(clean, copy, img, svg, sprite, html, css, js);
 
 exports.csscomb = cssComb;
+exports.pixelglass = pixelGlass;
 exports.build = build;
 exports.start = gulp.series(build, server);
