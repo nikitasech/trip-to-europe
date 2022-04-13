@@ -1,0 +1,164 @@
+.prices {
+  @include mobile-container;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+}
+
+.prices__title {
+  margin-bottom: 20px;
+}
+
+.prices__text {
+  padding-right: 10px;
+  padding-left: 10px;
+
+  text-align: center;
+  letter-spacing: 0;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 0;
+    padding-left: 0;
+    margin-bottom: 32px;
+  }
+}
+
+.prices__contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 34px;
+  text-align: center;
+  letter-spacing: 0;
+}
+
+.prices__contact-link {
+  padding-top: 12px;
+
+  text-align: center;
+  color: $accent-color;
+}
+
+.prices__list {
+  @include list-reset;
+}
+
+.prices__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  min-height: 630px;
+  margin-bottom: 30px;
+  padding-top: 28px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  letter-spacing: -1.3px;
+
+  border: 1px solid rgba($basic-text-color, 0.3);
+  border-bottom: none;
+  border-radius: 7px 7px 0 0;
+
+  &--sale {
+    letter-spacing: 0;
+
+    border: 3px solid $accent-color;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 282px;
+  }
+}
+
+.prices__name {
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  font-size: 24px;
+  line-height: 34px;
+}
+
+.prices__price {
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 34px;
+  letter-spacing: 0;
+}
+
+.prices__description {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0;
+
+  &::after {
+    content: "";
+
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin-top: 8px;
+
+    background-color: $accent-color;
+  }
+}
+
+.prices__package-list {
+  @include list-reset;
+
+  flex-grow: 1;
+  margin-bottom: 30px;
+
+  line-height: 32px;
+}
+
+.prices__package-item {
+  display: flex;
+  margin-bottom: 9px;
+
+  letter-spacing: 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: url("./../img/check-mark-accent.svg");
+
+    display: block;
+    margin-top: 2px;
+    margin-right: 13px;
+  }
+}
+
+.prices__item--sale .prices__package-item::before {
+  content: url("./../img/check-mark-dark.svg");
+}
+
+.prices__list-mark {
+  display: block;
+  width: 25px;
+  height: 12px;
+  margin-top: 12px;
+  margin-right: 13px;
+}
+
+.prices__button {
+  width: calc(100% + 42px);
+}
