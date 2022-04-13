@@ -20,12 +20,13 @@
   margin-left: -16px;
   padding-bottom: 0;
   overflow-x: scroll;
+  box-sizing: border-box;
 
   -ms-overflow-style: none;
   scrollbar-width: none;
 
   @media (min-width: $tablet-width) {
-    width: calc(100% + 42px);
+    width: calc(100% + 37px);
     margin-bottom: 30px;
   }
 
