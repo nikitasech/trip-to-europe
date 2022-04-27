@@ -1,13 +1,13 @@
 .page {
   @media (min-width: $desktop-width) {
-    background-image: url("./../img/desktop-countries-info-background@1x.png");
+    background-image: url("./../img/desktop-background-countries-info@1x.png");
     background-repeat: no-repeat;
-    background-position: -20px 2700px;
+    background-position: -110px 2700px;
     background-size: 1444px 1088px;
 
     @media (min-resolution: $retina-dpi),
     (min-resolution: $retina-dppx) {
-      background-image: url("./../img/desktop-countries-info-background@2x.png");
+      background-image: url("./../img/desktop-background-countries-info@2x.png");
     }
   }
 }
@@ -43,7 +43,7 @@
     margin-bottom: 75px;
   }
 
-  // @media (min-width: $desktop-width) {
-  //   margin-bottom: 125px;
-  // }
+  @media (min-width: $desktop-width) {
+    margin-bottom: 230px;
+  }
 }
