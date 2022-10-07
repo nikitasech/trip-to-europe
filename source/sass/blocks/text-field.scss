@@ -1,0 +1,93 @@
+.text-field {
+  position: relative;
+
+  &--required::before {
+    content: "*";
+    position: absolute;
+    top: 5px;
+    left: 15px;
+
+    color: $accent-color;
+  }
+}
+
+.text-field label {
+  position: absolute;
+  top: 16px;
+  left: 15px;
+
+  width: calc(100% - 40px);
+  overflow: hidden;
+
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: normal;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  cursor: text;
+
+  user-select: none;
+}
+
+.text-field--required label {
+  left: 25px;
+}
+
+.text-field--number label {
+  &::before {
+    content: "+7\00a0\00a0\00a0";
+
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+.text-field input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  font-weight: 400;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  font-family: inherit;
+
+  border: 1px solid rgba($basic-text-color, 0.3);
+
+  &::-webkit-input-placeholder {
+    opacity: 0;
+  }
+
+  &::-moz-placeholder {
+    opacity: 0;
+  }
+
+  &:-moz-placeholder {
+    opacity: 0;
+  }
+
+  &:-ms-input-placeholder {
+    opacity: 0;
+  }
+
+  &::placeholder {
+    opacity: 0;
+  }
+}
+
+.text-field--required input {
+  padding-left: 24px;
+}
+
+.text-field--number input {
+  padding-left: 24px;
+}
+
+.text-field input:focus ~ label,
+.text-field input:not(:placeholder-shown) ~ label {
+  visibility: hidden;
+}

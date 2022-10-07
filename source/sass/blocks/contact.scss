@@ -2,14 +2,21 @@
   display: flex;
   align-items: center;
 
-  font-size: 18px;
-  line-height: 32px;
+  font-size: 14px;
+  line-height: 17px;
   color: $dark-text-color;
+  color: #fe7865;
   letter-spacing: 0;
 }
 
 .contact__icon {
   margin-right: 17px;
-  stroke: $dark-text-color;
-  stroke-width: 2px;
+
+  fill: #d7d9df;
+  stroke: #d7d9df;
+  stroke-width: 0;
+
+  &--black {
+    stroke: $dark-text-color;
+  }
 }
