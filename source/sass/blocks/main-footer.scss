@@ -1,0 +1,34 @@
+.main-footer {
+  padding-top: 60px;
+  padding-right: 21px;
+  padding-left: 21px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+
+    column-gap: 100px;
+
+    grid-template-columns: auto 330px;
+  }
+
+  // @media (min-width: $desktop-width) {
+  //   margin-bottom: 200px;
+  // }
+}
+
+.main-footer > *:not(:last-child) {
+  border-bottom: 1px solid #d7d9df;
+
+  @media (min-width: $tablet-width) {
+    border-bottom: 0;
+  }
+}
+
+.main-footer > *:last-child {
+  border-top: 1px solid #d7d9df;
+}
+
+.main-footer__corporate-travel {
+  grid-column-end: 3;
+  grid-column-start: 1;
+}
